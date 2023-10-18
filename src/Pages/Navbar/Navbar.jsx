@@ -15,7 +15,7 @@ const Navbar = () => {
             <div className="w-2/3 flex justify-between items-center">
                 <div>
                     <Link to="/">
-                        <img className='w-[200px] cursor-pointer' src="../../../public/Image/logo_carhant.png" alt="" />
+                        <img className='w-[200px] cursor-pointer' src="./Image/logo_carhant.png" alt="" />
                     </Link>
                 </div>
                 <ul className="flex justify-center ml-12 items-center gap-x-6">

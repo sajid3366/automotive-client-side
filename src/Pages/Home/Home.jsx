@@ -1,4 +1,5 @@
 import Brands from "./Brands";
+import Review from "./Review";
 
 const Home = () => {
     return (
@@ -50,6 +51,7 @@ const Home = () => {
 
 
             <Brands></Brands>
+            <Review></Review>
 
         </div>
     );
