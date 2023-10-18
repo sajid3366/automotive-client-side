@@ -1,9 +1,12 @@
+import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const AddProduct = () => {
+const Update = () => {
 
-
-    const handleAddProduct = e => {
+    // const car = useLoaderData()
+    // console.log(car);
+    // const {_id}= car;
+    const handleUpdateProduct = e => {
         e.preventDefault();
 
         const form = e.target;
@@ -15,24 +18,24 @@ const AddProduct = () => {
         const photo = form.photo.value;
         const brand = form.brand.value;
 
-        const newProduct = { name, brand, type, rating, price, description, photo };
-        console.log(newProduct);
+        const updateProduct = { name, brand, type, rating, price, description, photo };
+        console.log(updateProduct);
 
-        fetch('http://localhost:5000/product', {
-            method: "POST",
+        fetch(`https://coffee-shop-server-eo88ulseb-ahtesham-sajids-projects.vercel.app/coffee/${_id}`, {
+            method: "PUT",
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(newProduct)
+            body: JSON.stringify(updateProduct)
 
         })
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                if (data.insertedId) {
+                if (data.modifiedCount > 0) {
                     Swal.fire({
                         title: 'Success!',
-                        text: 'Car Added successfully',
+                        text: 'Coffee Updated successfully',
                         icon: 'success',
                         confirmButtonText: 'OK'
                     })
@@ -42,9 +45,9 @@ const AddProduct = () => {
 
     return (
         <div className='bg-[#F4F3F0] p-12 mt-12 rounded-lg'>
-            <h1 className='text-2xl font-semibold mb-8 text-center'>Add A New Car</h1>
+            <h1 className='text-2xl font-semibold mb-8 text-center'>Update Information</h1>
 
-            <form onSubmit={handleAddProduct}>
+            <form onSubmit={handleUpdateProduct}>
                 <div className=' mb-8'>
                     <div className='w-full'>
                         <p>Photo URL</p>
@@ -95,11 +98,11 @@ const AddProduct = () => {
 
                 </div>
 
-                <input className='btn btn-block bg-slate-300' type="submit" value="Add Product" />
+                <input className='btn btn-block bg-slate-300' type="submit" value="Update Product" />
             </form>
 
         </div>
     );
 };
 
-export default AddProduct;
+export default Update;

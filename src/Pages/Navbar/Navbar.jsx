@@ -15,7 +15,7 @@ const Navbar = () => {
             <div className="w-2/3 flex justify-between items-center">
                 <div>
                     <Link to="/">
-                        <img className='w-[200px] cursor-pointer' src="./Image/logo_carhant.png" alt="" />
+                        <img className='w-[200px] cursor-pointer' src="https://i.ibb.co/JzwKjLj/logo-carhant.png" alt="" />
                     </Link>
                 </div>
                 <ul className="flex justify-center ml-12 items-center gap-x-6">
@@ -60,7 +60,7 @@ const Navbar = () => {
                     user ? <>
 
                         <div className="flex gap-2 items-center">
-                            {/* <span className="text-xl font-semibold">{user.displayName}</span> */}
+                            
                             <p className="text-xl w-full flex  font-semibold">{user.displayName}</p>
                             <img className="w-[20%] h-[50px] rounded-full" src={user.photoURL} alt="" />
                             <div>
