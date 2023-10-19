@@ -3,9 +3,9 @@ import Swal from "sweetalert2";
 
 const Update = () => {
 
-    // const car = useLoaderData()
-    // console.log(car);
-    // const {_id}= car;
+    const car = useLoaderData()
+    console.log(car);
+    const {_id, name, brand, type, rating, price, description, photo }= car;
     const handleUpdateProduct = e => {
         e.preventDefault();
 
@@ -21,7 +21,7 @@ const Update = () => {
         const updateProduct = { name, brand, type, rating, price, description, photo };
         console.log(updateProduct);
 
-        fetch(`https://coffee-shop-server-eo88ulseb-ahtesham-sajids-projects.vercel.app/coffee/${_id}`, {
+        fetch(`http://localhost:5000/product/${_id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'
@@ -35,7 +35,7 @@ const Update = () => {
                 if (data.modifiedCount > 0) {
                     Swal.fire({
                         title: 'Success!',
-                        text: 'Coffee Updated successfully',
+                        text: 'Updated successfully',
                         icon: 'success',
                         confirmButtonText: 'OK'
                     })
@@ -45,13 +45,13 @@ const Update = () => {
 
     return (
         <div className='bg-[#F4F3F0] p-12 mt-12 rounded-lg'>
-            <h1 className='text-2xl font-semibold mb-8 text-center'>Update Information</h1>
+            <h1 className='text-4xl font-semibold mb-8 text-center'>Update Information</h1>
 
             <form onSubmit={handleUpdateProduct}>
                 <div className=' mb-8'>
                     <div className='w-full'>
                         <p>Photo URL</p>
-                        <input className='border-2 px-4 rounded-md mt-2 border-solid w-full h-[50px]' placeholder='Photo URL' type="text" name="photo" id="" />
+                        <input className='border-2 px-4 rounded-md mt-2 border-solid w-full h-[50px]' placeholder='Photo URL' type="text" defaultValue={photo} name="photo" id="" />
 
                     </div>
 
@@ -60,12 +60,12 @@ const Update = () => {
                 <div className="flex gap-4 mb-8">
                     <div className='md:w-1/2'>
                         <p>Car Name</p>
-                        <input className='border-2 rounded-md mt-2 border-solid px-4 w-full h-[50px]' placeholder='Car name' type="text" name="name" id="" />
+                        <input className='border-2 rounded-md mt-2 border-solid px-4 w-full h-[50px]' placeholder='Car name' type="text" defaultValue={name} name="name" id="" />
 
                     </div>
                     <div className='md:w-1/2'>
                         <p>Car Brand</p>
-                        <input className='border-2 rounded-md mt-2 border-solid px-4 w-full h-[50px]' placeholder='Car Brand' type="text" name="brand" id="" />
+                        <input className='border-2 rounded-md mt-2 border-solid px-4 w-full h-[50px]' placeholder='Car Brand' type="text" defaultValue={brand} name="brand" id="" />
 
                     </div>
                 </div>
@@ -73,12 +73,12 @@ const Update = () => {
 
                     <div className='md:w-1/2'>
                         <p>Type</p>
-                        <input className='border-2 mt-2 rounded-md px-4 border-solid w-full h-[50px]' placeholder='Type' type="text" name="type" id="" />
+                        <input className='border-2 mt-2 rounded-md px-4 border-solid w-full h-[50px]' placeholder='Type' type="text" defaultValue={type} name="type" id="" />
 
                     </div>
                     <div className='md:w-1/2'>
                         <p>Price</p>
-                        <input className='border-2 rounded-md mt-2 px-4 border-solid w-full h-[50px]' placeholder='Price' type="text" name="price" id="" />
+                        <input className='border-2 rounded-md mt-2 px-4 border-solid w-full h-[50px]' placeholder='Price' type="text" defaultValue={price} name="price" id="" />
 
                     </div>
 
@@ -87,12 +87,12 @@ const Update = () => {
 
                     <div className='md:w-1/2'>
                         <p>Description</p>
-                        <input className='border-2 rounded-md px-4 mt-2 border-solid w-full h-[50px]' placeholder='Description' type="text" name="description" id="" />
+                        <input className='border-2 rounded-md px-4 mt-2 border-solid w-full h-[50px]' placeholder='Description' type="text" defaultValue={description} name="description" id="" />
 
                     </div>
                     <div className='md:w-1/2'>
                         <p>Rating</p>
-                        <input className='border-2 rounded-md px-4 mt-2 border-solid w-full h-[50px]' placeholder='Rating' type="text" name="rating" id="" />
+                        <input className='border-2 rounded-md px-4 mt-2 border-solid w-full h-[50px]' placeholder='Rating' type="text" defaultValue={rating} name="rating" id="" />
 
                     </div>
 

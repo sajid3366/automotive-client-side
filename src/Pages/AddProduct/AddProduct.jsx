@@ -42,7 +42,7 @@ const AddProduct = () => {
 
     return (
         <div className='bg-[#F4F3F0] p-12 mt-12 rounded-lg'>
-            <h1 className='text-2xl font-semibold mb-8 text-center'>Add A New Car</h1>
+            <h1 className='text-2xl font-semibold mb-8 text-center'>Add A New Product</h1>
 
             <form onSubmit={handleAddProduct}>
                 <div className=' mb-8'>
