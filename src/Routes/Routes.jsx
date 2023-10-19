@@ -62,9 +62,19 @@ const router = createBrowserRouter([
                 loader:()=>fetch(`http://localhost:5000/product/Ferrari`)
             },
             {
+                path: "/ferrari/:id",
+                element: <PrivateRoute><Details></Details></PrivateRoute>,
+                loader:() =>fetch(`http://localhost:5000/product/Ferrari/`)
+            },
+            {
                 path:"/bmw",
                 element: <Bmw></Bmw>,
                 loader:()=>fetch(`http://localhost:5000/product/BMW`)
+            },
+            {
+                path: "/bmw/:id",
+                element: <PrivateRoute><Details></Details></PrivateRoute>,
+                loader:() =>fetch(`http://localhost:5000/product/BMW/`)
             },
             {
                 path:"/ford",
@@ -72,14 +82,29 @@ const router = createBrowserRouter([
                 loader:()=>fetch(`http://localhost:5000/product/Ford`)
             },
             {
+                path: "/ford/:id",
+                element: <PrivateRoute><Details></Details></PrivateRoute>,
+                loader:() =>fetch(`http://localhost:5000/product/Ford/`)
+            },
+            {
                 path:"/toyota",
                 element: <Toyota></Toyota>,
                 loader:()=>fetch(`http://localhost:5000/product/Toyota`)
             },
             {
+                path: "/toyota/:id",
+                element: <PrivateRoute><Details></Details></PrivateRoute>,
+                loader:() =>fetch(`http://localhost:5000/product/Toyota/`)
+            },
+            {
                 path:"/rollsroyce",
                 element: <RollsRoyce></RollsRoyce>,
-                loader:()=>fetch(`http://localhost:5000/product/RollRoyce`)
+                loader:()=>fetch(`http://localhost:5000/product/Roll-Royce`)
+            },
+            {
+                path: "/rollsroyce/:id",
+                element: <PrivateRoute><Details></Details></PrivateRoute>,
+                loader:() =>fetch(`http://localhost:5000/product/RollsRoyce/`)
             },
             {
                 path: "/update/:id",
