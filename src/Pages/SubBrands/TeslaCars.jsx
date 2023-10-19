@@ -14,9 +14,9 @@ const TeslaCars = ({ car }) => {
                     <p className="text-lg font-bold">$ {price}</p>
                     <p className="text-lg font-semibold ">Rating : {rating}</p>
                     <div className="mt-24 flex justify-between w-full">
-                        <Link to={`/tesla/${_id}`}><p className="bg-red-600 text-xl font-semibold  text-white px-4 py-2 rounded-lg cursor-pointer">View Details</p></Link>
+                        <Link to={`/tesla/${_id}`}><p className="bg-red-600 text-xl font-semibold  text-white px-4 py-2 rounded-sm cursor-pointer">View Details</p></Link>
                         <Link to={`/update/${_id}`}>
-                            <p className="bg-orange-500 text-xl font-semibold rounded-lg text-white px-4 py-2  cursor-pointer">Update</p>
+                            <p className="border-red-600 border-2 text-xl font-semibold rounded-sm text-red-600 px-4 py-2  cursor-pointer">Update</p>
                         </Link>
                     </div>
                 </div>
