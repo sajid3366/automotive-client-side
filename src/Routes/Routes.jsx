@@ -44,7 +44,7 @@ const router = createBrowserRouter([
             {
                 path:"/mycart",
                 element:<PrivateRoute><MyCart></MyCart></PrivateRoute>,
-                loader: ()=>fetch('http://localhost:5000/cart')
+                loader: ()=>fetch('http://localhost:5000/carcart')
             },
             {
                 path:"/tesla",

@@ -1,4 +1,5 @@
 import { MdDelete } from "react-icons/md";
+import Swal from "sweetalert2";
 
 // MdDelete
 const Carts = ({ cart }) => {
@@ -6,7 +7,45 @@ const Carts = ({ cart }) => {
     const { _id, photo, name, type, brand, price, rating } = cart;
 
     const handleDelete = id => {
-        console.log("hello ", id);
+        console.log(id);
+
+
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        })
+        .then((result) => {
+            if (result.isConfirmed) {
+
+
+                fetch(`https://coffee-shop-server-eo88ulseb-ahtesham-sajids-projects.vercel.app/user/${id}`, {
+                    method: "DELETE",
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if (data.deletedCount > 0) {
+                            Swal.fire(
+                                'Deleted!',
+                                'Your coffee has been deleted.',
+                                'success'
+                            )
+                            const remaining = users.filter(user => user._id !== id);
+                            setUsers(remaining);
+        
+                        }
+        
+                    })
+            }
+        })
+
+
+       
     }
 
 
