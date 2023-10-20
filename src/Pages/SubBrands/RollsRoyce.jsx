@@ -1,5 +1,4 @@
 import { useLoaderData } from 'react-router-dom';
-import RollsRoyceCars from './RollsRoyceCars';
 
 const RollsRoyce = () => {
     const cars = useLoaderData()
@@ -70,7 +69,11 @@ const RollsRoyce = () => {
             </div>
             <div className="max-w-6xl mx-auto">
                 {
-                    cars?.map(car => <RollsRoyceCars key={car._id} car={car}></RollsRoyceCars>)
+                    cars.length>0? cars.map(car=> <>
+                    <div key={car._id}></div>
+                    </>): <div>
+                        <h2 className='text-center text-2xl font-semibold mb-12'>No car is available at this moment</h2>
+                    </div>
                 }
             </div>
         </div>

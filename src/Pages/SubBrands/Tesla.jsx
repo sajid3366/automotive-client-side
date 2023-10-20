@@ -71,7 +71,10 @@ const Tesla = () => {
             </div>
             <div className="max-w-6xl mx-auto">
                 {
-                    cars?.map(car => <TeslaCars key={car._id} car={car}></TeslaCars>)
+                    cars.length > 0? cars.map(car => <TeslaCars key={car._id} car={car}></TeslaCars>):
+                    <div>
+                        <h2 className='text-center text-2xl font-semibold mb-12'>No car is available at this moment</h2>
+                    </div>
                 }
             </div>
 

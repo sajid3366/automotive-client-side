@@ -29,7 +29,7 @@ const MyCart = () => {
                 if (result.isConfirmed) {
 
 
-                    fetch(`http://localhost:5000/carcart/${id}`, {
+                    fetch(`https://automotive-server-7gmgu6zye-ahtesham-sajids-projects.vercel.app/carcart/${id}`, {
                         method: "DELETE"
                     })
                         .then(res => res.json())

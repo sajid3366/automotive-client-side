@@ -69,7 +69,9 @@ const Toyota = () => {
             </div>
             <div className="max-w-6xl mx-auto">
                 {
-                    cars?.map(car => <ToyotaCars key={car._id} car={car}></ToyotaCars>)
+                    cars.length>0? cars.map(car => <ToyotaCars key={car._id} car={car}></ToyotaCars>):<div>
+                    <h2 className='text-center text-2xl font-semibold mb-12'>No car is available at this moment</h2>
+                </div>
                 }
             </div>
         </div>

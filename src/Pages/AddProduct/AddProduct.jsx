@@ -18,7 +18,7 @@ const AddProduct = () => {
         const newProduct = { name, brand, type, rating, price, description, photo };
         console.log(newProduct);
 
-        fetch('http://localhost:5000/product', {
+        fetch('https://automotive-server-7gmgu6zye-ahtesham-sajids-projects.vercel.app/product', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -41,7 +41,7 @@ const AddProduct = () => {
     }
 
     return (
-        <div className='bg-[#F4F3F0] p-12 mt-12 rounded-lg'>
+        <div className='bg-[#F4F3F0] px-[250px] py-12 mt-12 mb-12 rounded-md'>
             <h1 className='text-2xl font-semibold mb-8 text-center'>Add A New Product</h1>
 
             <form onSubmit={handleAddProduct}>

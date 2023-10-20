@@ -1,20 +1,8 @@
-import { useState } from "react";
 import { FaCar } from "react-icons/fa";
-import { Link, useLoaderData } from "react-router-dom";
-import Tesla from "../SubBrands/Tesla";
+import { Link } from "react-router-dom";
 
 const Brands = () => {
-
-    // const cars = useLoaderData();
-    // const [teslaCars, setTeslaCars] = useState([]);
-
-    // console.log(cars);
-  
-    // const remaining = cars.filter(car => car.brand === "Tesla")
-    // setTeslaCars(remaining);
-    // console.log(teslaCars);
     
-
     return (
         <div className="max-w-6xl mx-auto">
             <div  className="text-center my-8">
@@ -28,10 +16,7 @@ const Brands = () => {
                         <img className="w-full h-[350px]" src="https://i.ibb.co/qkpqN6w/tesla-logo-2007-full-download.webp" alt="" />
                         <hr className="h-2 " />
                         <h1 className="text-4xl font-semibold text-center mt-2 mb-2">Tesla</h1>
-                        {/* {
-                               
-                            teslaCars.map((car, idx) =><Tesla key={idx} car={car}></Tesla>)
-                        } */}
+                       
                     </div>
                 </Link>
                 <Link to="/ferrari">

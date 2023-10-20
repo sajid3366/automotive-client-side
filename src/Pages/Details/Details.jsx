@@ -20,7 +20,7 @@ const Details = () => {
 
     const handleAddToCart = (id) => {
         console.log(id);
-        fetch('http://localhost:5000/carcart', {
+        fetch('https://automotive-server-7gmgu6zye-ahtesham-sajids-projects.vercel.app/carcart', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
