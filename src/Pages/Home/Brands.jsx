@@ -35,11 +35,11 @@ const Brands = () => {
                     </div>
                 </Link>
 
-                <Link to="/rollsroyce">
+                <Link to="/hyundai">
                     <div className="bg-gray-100 rounded-lg px-4 py-2 cursor-pointer">
-                        <img className="w-full h-[350px]" src="https://i.ibb.co/5jqShKJ/Rolls-Royce-logo-2048x2048.webp" alt="" />
+                        <img className="w-full h-[350px]" src="https://i.ibb.co/WK6Qdrb/hyundai-logo-2011-download.webp" alt="" />
                         <hr className="h-2 " />
-                        <h1 className="text-4xl font-semibold text-center mt-2 mb-2">Rolls Royc</h1>
+                        <h1 className="text-4xl font-semibold text-center mt-2 mb-2">Hyundai</h1>
                     </div>
                 </Link>
 

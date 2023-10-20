@@ -4,8 +4,7 @@ import Swal from "sweetalert2";
 const Update = () => {
 
     const car = useLoaderData()
-    console.log(car);
-    const { _id, name, brand, type, rating, price, description, photo } = car;
+    const { _id, name, brand, type, rating, price, photo } = car;
     const handleUpdateProduct = e => {
         e.preventDefault();
 

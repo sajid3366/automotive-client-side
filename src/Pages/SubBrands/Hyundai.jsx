@@ -1,8 +1,8 @@
 import { useLoaderData } from 'react-router-dom';
+import HyundaiCars from './HyundaiCars';
 
-const RollsRoyce = () => {
+const Hyundai = () => {
     const cars = useLoaderData()
-    console.log(cars);
     return (
         <div>
             <div className="carousel w-full mb-20 mt-5">
@@ -69,15 +69,13 @@ const RollsRoyce = () => {
             </div>
             <div className="max-w-6xl mx-auto">
                 {
-                    cars.length>0? cars.map(car=> <>
-                    <div key={car._id}></div>
-                    </>): <div>
-                        <h2 className='text-center text-2xl font-semibold mb-12'>No car is available at this moment</h2>
-                    </div>
+                    cars.length>0? cars.map(car => <HyundaiCars key={car._id} car={car}></HyundaiCars>):<div>
+                    <h2 className='text-center text-2xl font-semibold mb-12'>No car is available at this moment</h2>
+                </div>
                 }
             </div>
         </div>
     );
 };
 
-export default RollsRoyce;
+export default Hyundai;

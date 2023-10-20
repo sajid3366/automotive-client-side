@@ -1,10 +1,15 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
+import { BsFillSunFill, BsFillMoonStarsFill } from "react-icons/bs";
+
+// FiSun BsFillSunFill
 
 const Navbar = () => {
 
     const { user, logOut } = useContext(AuthContext);
+
+    const [isDark, setIsDark] = useState(true)
 
     const handleLogout = () => {
         logOut()
@@ -46,24 +51,30 @@ const Navbar = () => {
 
                 </ul>
             </div>
-            <div className="mt-5 ml-14 lg:mt-0 py-2">
+            <div className="mt-5 ml-14 gap-2 lg:mt-0 py-2">
 
                 {
                     user ? <>
 
                         <div className="flex gap-2 items-center">
-                            
+
                             <p className="text-xl w-full flex  font-semibold">{user.displayName}</p>
                             <img className="w-[20%] h-[50px] rounded-full" src={user.photoURL} alt="" />
                             <div>
-                                <button onClick={handleLogout} className="ml-2 bg-slate-300 rounded-lg text-black px-4 py-2">Logout</button>
+                                <button onClick={handleLogout} className="ml-2 bg-slate-300 rounded-sm  text-black px-4 py-2">Logout</button>
+                            </div>
+                            <div onClick={() => setIsDark(!isDark)} className='cursor-pointer bg-gray-200 rounded-sm p-3'>
+                                {
+                                    isDark ? <BsFillSunFill></BsFillSunFill> : <BsFillMoonStarsFill></BsFillMoonStarsFill>
+                                }
                             </div>
                         </div>
                     </>
                         : <div className="w-1/3  items-center">
-                            <NavLink to='/login'><button className="bg-slate-300 rounded-lg text-black px-4 py-2">Login</button></NavLink>
+                            <NavLink to='/login'><button className="bg-slate-300 rounded-sm text-black  px-4 py-2">Login</button></NavLink>
                         </div>
                 }
+
             </div>
 
 

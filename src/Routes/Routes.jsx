@@ -12,9 +12,9 @@ import Ferrari from "../Pages/SubBrands/Ferrari";
 import Bmw from "../Pages/SubBrands/Bmw";
 import Ford from "../Pages/SubBrands/Ford";
 import Toyota from "../Pages/SubBrands/Toyota";
-import RollsRoyce from "../Pages/SubBrands/RollsRoyce";
 import Details from "../Pages/Details/Details";
 import Update from "../Pages/Update/Update";
+import Hyundai from "../Pages/SubBrands/Hyundai";
 
 
 
@@ -97,14 +97,14 @@ const router = createBrowserRouter([
                 loader:() =>fetch(`https://automotive-server-ev0wqh55k-ahtesham-sajids-projects.vercel.app/product/Toyota/`)
             },
             {
-                path:"/rollsroyce",
-                element: <RollsRoyce></RollsRoyce>,
-                loader:()=>fetch(`https://automotive-server-ev0wqh55k-ahtesham-sajids-projects.vercel.app/product/RollRoyce`)
+                path:"/hyundai",
+                element: <Hyundai></Hyundai>,
+                loader:()=>fetch(`https://automotive-server-ev0wqh55k-ahtesham-sajids-projects.vercel.app/product/Hyundai`)
             },
             {
-                path: "/rollsroyce/:id",
+                path: "/hyundai/:id",
                 element: <PrivateRoute><Details></Details></PrivateRoute>,
-                loader:() =>fetch(`https://automotive-server-ev0wqh55k-ahtesham-sajids-projects.vercel.app/product/RollsRoyce/`)
+                loader:() =>fetch(`https://automotive-server-ev0wqh55k-ahtesham-sajids-projects.vercel.app/product/Hyundai/`)
             },
             {
                 path: "/update/:id",

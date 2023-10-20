@@ -3,7 +3,6 @@ import FerrariCars from './FerrariCars';
 
 const Ferrari = () => {
     const cars = useLoaderData()
-    console.log(cars);
     return (
         <div>
             <div className="carousel w-full mb-20 mt-5">
