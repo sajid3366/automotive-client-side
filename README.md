@@ -1,6 +1,6 @@
 # CarHant
 
-- [@CarHant](smooth-channel.surge.sh)
+- [CarHant](https://smooth-channel.surge.sh/)
 
 
 Feature of this project
