@@ -20,7 +20,7 @@ const Details = () => {
 
     const handleAddToCart = (id) => {
         console.log(id);
-        fetch('https://automotive-server-7gmgu6zye-ahtesham-sajids-projects.vercel.app/carcart', {
+        fetch('https://automotive-server-ev0wqh55k-ahtesham-sajids-projects.vercel.app/carcart', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -43,7 +43,7 @@ const Details = () => {
     }
 
     return (
-        <div className='max-w-6xl mx-auto mb-16 mt-[80px]'>
+        <div className='max-w-6xl mx-auto mb-16 mt-12'>
             <img className='rounded-lg' src={detail.photo} alt="" />
             <div className='w-[200px] absolute ml-8 cursor-pointer -mt-[70px]'>
                 <p onClick={() => handleAddToCart(detail._id)} className='bg-red-600 text-white px-4 py-2 flex gap-2 items-center justify-center rounded-md text-xl font-semibold'><FaCartPlus></FaCartPlus>Add To Card</p>

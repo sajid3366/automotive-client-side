@@ -29,7 +29,7 @@ const MyCart = () => {
                 if (result.isConfirmed) {
 
 
-                    fetch(`https://automotive-server-7gmgu6zye-ahtesham-sajids-projects.vercel.app/carcart/${id}`, {
+                    fetch(`https://automotive-server-ev0wqh55k-ahtesham-sajids-projects.vercel.app/carcart/${id}`, {
                         method: "DELETE"
                     })
                         .then(res => res.json())
@@ -56,7 +56,7 @@ const MyCart = () => {
 
 
     return (
-        <div className="max-w-6xl mx-auto mb-20">
+        <div className="max-w-6xl mx-auto mt-12 mb-20">
             <div className="flex gap-5">
                 <div className="w-3/4">
                     {

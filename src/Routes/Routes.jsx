@@ -44,72 +44,72 @@ const router = createBrowserRouter([
             {
                 path:"/mycart",
                 element:<PrivateRoute><MyCart></MyCart></PrivateRoute>,
-                loader: ()=>fetch('https://automotive-server-7gmgu6zye-ahtesham-sajids-projects.vercel.app/carcart')
+                loader: ()=>fetch('https://automotive-server-ev0wqh55k-ahtesham-sajids-projects.vercel.app/carcart')
             },
             {
                 path:"/tesla",
                 element: <Tesla></Tesla>,
-                loader:()=>fetch(`https://automotive-server-7gmgu6zye-ahtesham-sajids-projects.vercel.app/product/Tesla`)
+                loader:()=>fetch(`https://automotive-server-ev0wqh55k-ahtesham-sajids-projects.vercel.app/product/Tesla`)
             },
             {
                 path: "/tesla/:id",
                 element: <PrivateRoute><Details></Details></PrivateRoute>,
-                loader:() =>fetch(`https://automotive-server-7gmgu6zye-ahtesham-sajids-projects.vercel.app/product/Tesla/`)
+                loader:() =>fetch(`https://automotive-server-ev0wqh55k-ahtesham-sajids-projects.vercel.app/product/Tesla/`)
             },
             {
                 path:"/ferrari",
                 element: <Ferrari></Ferrari>,
-                loader:()=>fetch(`https://automotive-server-7gmgu6zye-ahtesham-sajids-projects.vercel.app/product/Ferrari`)
+                loader:()=>fetch(`https://automotive-server-ev0wqh55k-ahtesham-sajids-projects.vercel.app/product/Ferrari`)
             },
             {
                 path: "/ferrari/:id",
                 element: <PrivateRoute><Details></Details></PrivateRoute>,
-                loader:() =>fetch(`https://automotive-server-7gmgu6zye-ahtesham-sajids-projects.vercel.app/product/Ferrari/`)
+                loader:() =>fetch(`https://automotive-server-ev0wqh55k-ahtesham-sajids-projects.vercel.app/product/Ferrari/`)
             },
             {
                 path:"/bmw",
                 element: <Bmw></Bmw>,
-                loader:()=>fetch(`https://automotive-server-7gmgu6zye-ahtesham-sajids-projects.vercel.app/product/BMW`)
+                loader:()=>fetch(`https://automotive-server-ev0wqh55k-ahtesham-sajids-projects.vercel.app/product/BMW`)
             },
             {
                 path: "/bmw/:id",
                 element: <PrivateRoute><Details></Details></PrivateRoute>,
-                loader:() =>fetch(`https://automotive-server-7gmgu6zye-ahtesham-sajids-projects.vercel.app/product/BMW/`)
+                loader:() =>fetch(`https://automotive-server-ev0wqh55k-ahtesham-sajids-projects.vercel.app/product/BMW/`)
             },
             {
                 path:"/ford",
                 element: <Ford></Ford>,
-                loader:()=>fetch(`https://automotive-server-7gmgu6zye-ahtesham-sajids-projects.vercel.app/product/Ford`)
+                loader:()=>fetch(`https://automotive-server-ev0wqh55k-ahtesham-sajids-projects.vercel.app/product/Ford`)
             },
             {
                 path: "/ford/:id",
                 element: <PrivateRoute><Details></Details></PrivateRoute>,
-                loader:() =>fetch(`https://automotive-server-7gmgu6zye-ahtesham-sajids-projects.vercel.app/product/Ford/`)
+                loader:() =>fetch(`https://automotive-server-ev0wqh55k-ahtesham-sajids-projects.vercel.app/product/Ford/`)
             },
             {
                 path:"/toyota",
                 element: <Toyota></Toyota>,
-                loader:()=>fetch(`https://automotive-server-7gmgu6zye-ahtesham-sajids-projects.vercel.app/product/Toyota`)
+                loader:()=>fetch(`https://automotive-server-ev0wqh55k-ahtesham-sajids-projects.vercel.app/product/Toyota`)
             },
             {
                 path: "/toyota/:id",
                 element: <PrivateRoute><Details></Details></PrivateRoute>,
-                loader:() =>fetch(`https://automotive-server-7gmgu6zye-ahtesham-sajids-projects.vercel.app/product/Toyota/`)
+                loader:() =>fetch(`https://automotive-server-ev0wqh55k-ahtesham-sajids-projects.vercel.app/product/Toyota/`)
             },
             {
                 path:"/rollsroyce",
                 element: <RollsRoyce></RollsRoyce>,
-                loader:()=>fetch(`https://automotive-server-7gmgu6zye-ahtesham-sajids-projects.vercel.app/product/RollRoyce`)
+                loader:()=>fetch(`https://automotive-server-ev0wqh55k-ahtesham-sajids-projects.vercel.app/product/RollRoyce`)
             },
             {
                 path: "/rollsroyce/:id",
                 element: <PrivateRoute><Details></Details></PrivateRoute>,
-                loader:() =>fetch(`https://automotive-server-7gmgu6zye-ahtesham-sajids-projects.vercel.app/product/RollsRoyce/`)
+                loader:() =>fetch(`https://automotive-server-ev0wqh55k-ahtesham-sajids-projects.vercel.app/product/RollsRoyce/`)
             },
             {
                 path: "/update/:id",
                 element: <PrivateRoute><Update></Update></PrivateRoute>,
-                loader: ({params})=>fetch(`https://automotive-server-7gmgu6zye-ahtesham-sajids-projects.vercel.app/product/update/${params.id}`)
+                loader: ({params})=>fetch(`https://automotive-server-ev0wqh55k-ahtesham-sajids-projects.vercel.app/product/update/${params.id}`)
 
             }
             

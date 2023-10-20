@@ -49,7 +49,7 @@ const Signup = () => {
                     name, email, password, photo
                 }
                 console.log(user);
-                fetch('https://automotive-server-7gmgu6zye-ahtesham-sajids-projects.vercel.app/user', {
+                fetch('https://automotive-server-ev0wqh55k-ahtesham-sajids-projects.vercel.app/user', {
                     method: "POST",
                     headers: {
                         'content-type': 'application/json'

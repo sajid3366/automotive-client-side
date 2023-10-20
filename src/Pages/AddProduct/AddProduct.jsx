@@ -18,7 +18,7 @@ const AddProduct = () => {
         const newProduct = { name, brand, type, rating, price, description, photo };
         console.log(newProduct);
 
-        fetch('https://automotive-server-7gmgu6zye-ahtesham-sajids-projects.vercel.app/product', {
+        fetch('https://automotive-server-ev0wqh55k-ahtesham-sajids-projects.vercel.app/product', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
