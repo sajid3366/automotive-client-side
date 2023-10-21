@@ -88,7 +88,7 @@ const Login = () => {
                     <button className="btn btn-primary"><FaGoogle></FaGoogle>Login With Google</button>
                 </div>
             </form>
-            <p className="text-center mt-4">Don't have an account? <Link className="text-red-500" to="/signup">Sign Up</Link></p>
+            <p className="text-center mb-8">Don't have an account? <Link className="text-red-500" to="/signup">Sign Up</Link></p>
         </div>
     );
 };

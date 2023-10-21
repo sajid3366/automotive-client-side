@@ -61,14 +61,14 @@ const MyCart = () => {
                 carts.length > 0 ? <div className="flex gap-5">
                     <div className="w-3/4">
                         {
-                            carts.map(cart => <div key={cart._id} className=" bg-gray-100 mb-5 rounded-sm px-5 py-3 flex gap-12">
+                            carts.map(cart => <div key={cart._id} className=" bg-gray-100 mb-5 rounded-sm px-5 py-3 lg:flex gap-12">
                                 <img className="w-[250px] rounded-sm h-[200px]" src={cart.photo} alt="" />
-                                <div className="w-1/2 flex ">
+                                <div className="lg:w-1/2 flex mt-4 lg:mt-0">
                                     <div>
-                                        <h2 className="text-3xl font-semibold">{cart.name}</h2>
+                                        <h2 className="text-xl lg:text-3xl font-semibold">{cart.name}</h2>
                                         <h4 className="text-xl font-medium mt-3 mb-3">Brand : <span className="font-normal">{cart.brand}</span></h4>
                                     </div>
-                                    <div className="ml-[90px]">
+                                    <div className="ml-7 lg:ml-[90px]">
                                         <p className="text-lg mb-4">$ {cart.price}</p>
                                         <p onClick={() => handleDelete(cart._id)} className="text-xl cursor-pointer"><MdDelete></MdDelete></p>
                                     </div>

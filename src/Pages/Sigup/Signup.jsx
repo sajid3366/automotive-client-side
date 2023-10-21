@@ -133,7 +133,7 @@ const Signup = () => {
                     <button className="btn text-white bg-[#403F3F]">Sign Up</button>
                 </div>
             </form>
-            <p className="text-center mt-4">Already have an account? <Link className="text-red-500" to="/login">Login</Link></p>
+            <p className="text-center mb-8">Already have an account? <Link className="text-red-500" to="/login">Login</Link></p>
         </div>
     );
 };

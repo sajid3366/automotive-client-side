@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
 
-// FiSun BsFillSunFill
 
 const Navbar = () => {
 
@@ -27,7 +26,7 @@ const Navbar = () => {
 
     }, [theme])
 
-    
+
 
     const handleLogout = () => {
         logOut()
@@ -35,41 +34,39 @@ const Navbar = () => {
 
     return (
         <nav className=" lg:flex justify-between items-center px-4 h-[100%] ">
-            <div className="w-2/3 flex justify-between items-center">
-                <div>
-                    <Link to="/">
-                        <img className='w-[200px] cursor-pointer' src="https://i.ibb.co/JQLmnhr/logo-carhant.png" alt="" />
-                    </Link>
-                </div>
-                <ul className="flex justify-center ml-12 items-center gap-x-6">
-                    <li>
-                        <NavLink
-                            to="/"
-                            className={({ isActive, isPending }) =>
-                                isActive ? "text-[#FF444A] underline font-bold" : isPending ? "pending" : ""
-                            }>
-                            Home
-                        </NavLink>
-
-                    </li>
-                    <li>
-                        <NavLink to="/addproduct" className={({ isActive, isPending }) =>
-                            isActive ? "text-[#FF444A] underline font-bold" : isPending ? "pending" : ""
-                        }>
-                            Add Product
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/mycart" className={({ isActive, isPending }) =>
-                            isActive ? "text-[#FF444A] underline font-bold" : isPending ? "pending" : ""
-                        }>
-                            My Cart
-                        </NavLink>
-                    </li>
-
-                </ul>
+            <div>
+                <Link to="/">
+                    <img className='w-full lg:w-[200px] cursor-pointer' src="https://i.ibb.co/JQLmnhr/logo-carhant.png" alt="" />
+                </Link>
             </div>
-            <div className="mt-5 ml-14 flex items-center gap-2 lg:mt-0 py-2">
+            <ul className="flex justify-center mt-5 lg:mt-0 lg:ml-12 items-center gap-x-6">
+                <li>
+                    <NavLink
+                        to="/"
+                        className={({ isActive, isPending }) =>
+                            isActive ? "text-[#FF444A] underline font-bold" : isPending ? "pending" : ""
+                        }>
+                        Home
+                    </NavLink>
+
+                </li>
+                <li>
+                    <NavLink to="/addproduct" className={({ isActive, isPending }) =>
+                        isActive ? "text-[#FF444A] underline font-bold" : isPending ? "pending" : ""
+                    }>
+                        Add Product
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to="/mycart" className={({ isActive, isPending }) =>
+                        isActive ? "text-[#FF444A] underline font-bold" : isPending ? "pending" : ""
+                    }>
+                        My Cart
+                    </NavLink>
+                </li>
+
+            </ul>
+            <div className="mt-5 lg:ml-14 flex justify-center items-center gap-2 lg:mt-0 py-2">
 
                 <div>
                     {
@@ -78,7 +75,7 @@ const Navbar = () => {
                             <div className="flex gap-2 items-center">
 
                                 <p className="text-xl w-full flex  font-semibold">{user.displayName}</p>
-                                <img className="w-[20%] h-[50px] rounded-full" src={user.photoURL} alt="" />
+                                <img className="w-[50px] h-[40px] rounded-full" src={user.photoURL} alt="" />
                                 <div>
                                     <button onClick={handleLogout} className="ml-2 bg-slate-300 rounded-sm  text-black px-4 py-2">Logout</button>
                                 </div>
@@ -99,7 +96,7 @@ const Navbar = () => {
                     <svg className="swap-off fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" /></svg>
 
                 </label>
-                
+
 
             </div>
 

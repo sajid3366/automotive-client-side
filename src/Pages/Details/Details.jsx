@@ -43,7 +43,7 @@ const Details = () => {
     }
 
     return (
-        <div className='max-w-6xl mx-auto mb-16 mt-12'>
+        <div className='max-w-6xl mx-auto mb-16 mt-12 px-3'>
             <img className='rounded-lg' src={detail.photo} alt="" />
             <div className='w-[200px] absolute ml-8 cursor-pointer -mt-[70px]'>
                 <p onClick={() => handleAddToCart(detail._id)} className='bg-red-600 text-white px-4 py-2 flex gap-2 items-center justify-center rounded-md text-xl font-semibold'><FaCartPlus></FaCartPlus>Add To Card</p>
