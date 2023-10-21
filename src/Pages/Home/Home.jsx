@@ -9,7 +9,7 @@ const Home = () => {
 
 
     return (
-        <div className="mt-12">
+        <div className=" mt-12">
             <div className="mb-28">
 
                 <div className="flex gap-[200px] items-center text-white absolute ml-[200px] mt-[150px]">

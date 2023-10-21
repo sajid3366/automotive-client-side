@@ -26,7 +26,7 @@ const Review = () => {
     };
 
     return (
-        <div className='mt-20 bg-gray-100  px-14 py-20 mb-20'>
+        <div className='mt-20   px-14 py-20 mb-20'>
             <h2 className='text-xl font-semibold text-red-500 flex justify-center mb-2 items-center gap-4 text-center'><FaCar></FaCar>TESTIMONIALS</h2>
             <h2 className="text-4xl font-bold  mt-4 text-center mb-12">What Our Clients <span className='text-red-600'>Says's</span></h2>
             
